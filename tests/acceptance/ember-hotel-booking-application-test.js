@@ -10,7 +10,7 @@ module('Acceptance | ember hotel booking application', function (hooks) {
 
     assert.strictEqual(currentURL(), '/');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('SuperRentals')
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('Welcome to Super Rentals!');
 
     assert.dom('.jumbo a.button').hasText('About Us');
@@ -24,7 +24,7 @@ module('Acceptance | ember hotel booking application', function (hooks) {
 
     assert.strictEqual(currentURL(), '/about');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('SuperRentals')
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('About Super Rentals');
 
     assert.dom('.jumbo a.button').hasText('Contact Us');
@@ -38,7 +38,7 @@ module('Acceptance | ember hotel booking application', function (hooks) {
 
     assert.strictEqual(currentURL(), '/getting-in-touch');
     assert.dom('nav').exists();
-    assert.dom('h1').hasText('SuperRentals')
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('Contact Us');
 
     assert.dom('.jumbo a.button').hasText('About Us');
@@ -47,10 +47,10 @@ module('Acceptance | ember hotel booking application', function (hooks) {
     assert.strictEqual(currentURL(), '/about');
   });
 
-  test('navigate using the nav-bar', async function(assert){
+  test('navigate using the nav-bar', async function (assert) {
     await visit('/');
 
-    assert.strictEqual(currentURL(), '/')
+    assert.strictEqual(currentURL(), '/');
 
     assert.dom('nav').exists();
     assert.dom('nav a.menu-index').hasText('SuperRentals');
