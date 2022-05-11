@@ -6,19 +6,20 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | rental/image', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('It renders the given image correctly', async function(assert){
+  test('It renders the given image correctly', async function (assert) {
     await render(hbs`<Rental::Image 
       src="/assets/images/teaching-tomster.png"
       alt="Teaching Tomster"
     />`);
 
-    assert.dom('.image img')
+    assert
+      .dom('.image img')
       .exists()
       .hasAttribute('src', '/assets/images/teaching-tomster.png')
       .hasAttribute('alt', 'Teaching Tomster');
   });
 
-  test('clicking on image component to toggle the zoom-in zoom-out size', async function(assert){
+  test('clicking on image component to toggle the zoom-in zoom-out size', async function (assert) {
     await render(hbs`<Rental::Image
       src="/assets/images/teaching-tomster.png"
       alt="Teaching Tomster"
